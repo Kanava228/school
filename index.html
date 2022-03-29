@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon"
+		href="data:image/jpeg;base64,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"
+		type="image/x-icon">
+	<link rel="stylesheet" href="./main.css">
+	<title>Kanava</title>
+</head>
+
+<body>
+	<h1>9 класс</h1>
+	<h3><a href="#pn">Понеділок</a></h3>
+	<h3><a href="#vt">Вівторок</a></h3>
+	<h3><a href="#sr">Середа</a></h3>
+	<h3><a href="#cht">Четвер</a></h3>
+	<h3><a href="#pt">П'ятниця</a></h3>
+	<div>
+	<table border="1px">
+		<tr id="pn">
+			<th>Понеділок</th>
+			<th>Підручник</th>
+			<th>ГДЗ</th>
+			<th>Час</th>
+			<th>Класрум</th>
+			<th>ДЗ</th>
+		</tr>
+		<tr>
+			<th>1. Фізична культура</th>
+			<td>ні</td>
+			<td>ні</td>
+			<td>8:15-8:50</td>
+			<td><a href="https://classroom.google.com/u/1/c/MTQ5MjQzNjc3MDIx" target="_blank" rel="noopener noreferrer">Фізична культура</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>Година спілкування</th>
+			<td>навіщо</td>
+			<td>навіщо</td>
+			<td>8:50-9:00</td>
+			<td><a href="https://classroom.google.com/u/1/c/NDIyODY4OTUyMTg2" target="_blank" rel="noopener noreferrer">Година спілкування</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>2. Англійська мова</th>
+			<td><a target="_blank" href="https://pidruchnyk.com.ua/979-9klas-nesvit-2017.html">Книга</a></td>
+			<td><a target="_blank"
+					href="https://4book.org/gdz-reshebniki-ukraina/9-klas/gdz-vidpovidi-angliyska-mova-9-klas-nesvit-2017">ГДЗ</a>
+			</td>
+			<td>9:10-9:55</td>
+			<td><a href="https://classroom.google.com/u/1/c/MTQ3Njk0NzQ5MjA3" target="_blank" rel="noopener noreferrer">Англійська мова</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>3. Геометрія</th>
+			<td><a target="_blank" href="https://pidruchnyk.com.ua/1031-ister-geometriya-9-klas.html">Книга</a></td>
+			<td><a target="_blank" href="https://vshkole.com/9-klass/reshebniki/geometriya/os-ister-2017">ГДЗ</a></td>
+			<td>10:05-10:50</td>
+			<td><a href="https://classroom.google.com/u/1/c/MTQ4MzUzNjc3NDE1" target="_blank" rel="noopener noreferrer">Геометрія</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>4. Географія</th>
+			<td><a href="https://pidruchnyk.com.ua/993-geografiya-9-klas-boyko.html" target="_blank">Книга</a></td>
+			<td><a href="https://shkola.obozrevatel.com/gdz/9klass/geografija/bojko-20172/" target="_blank">ГДЗ</a></td>
+			<td>11:10-11:55</td>
+			<td><a href="https://classroom.google.com/u/1/c/MTQ3Njk5MjE2MDU2" target="_blank" rel="noopener noreferrer">Географія</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>5. Біологія</th>
+			<td><a href="https://pidruchnyk.com.ua/912-biologiya-sobol-9-klas.html" target="_blank"
+					rel="noopener noreferrer">Книга</a></td>
+			<td><a href="https://4book.org/gdz-reshebniki-ukraina/9-klas/biologiya-9-klas-sobol-gdz-2017" target="_blank"
+					rel="noopener noreferrer">ГДЗ</a></td>
+			<td>12:10-12:55</td>
+			<td><a href="https://classroom.google.com/u/1/c/MTQyOTgwOTI2MTI4" target="_blank" rel="noopener noreferrer">Біологія</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>6. Українська література</th>
+			<td><a href="https://pidruchnyk.com.ua/967-ukrliteratura-9-klas-avramenko-2017.html" target="_blank"
+					rel="noopener noreferrer">Книга</a></td>
+			<td><a href="https://4book.org/gdz-reshebniki-ukraina/9-klas/gdz-ukrayinska-literatura-9-klas-avramenko-2017"
+					target="_blank" rel="noopener noreferrer">ГДЗ</a></td>
+			<td>13:05-13:50</td>
+			<td><a href="https://classroom.google.com/u/1/c/MTQ3Njg4MjkwMjc0" target="_blank" rel="noopener noreferrer">Українська література</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>7. Інформатика</th>
+			<td><a href="https://pidruchnyk.com.ua/1046-informatika-9-klas-ryvkind-2017.html" target="_blank"
+					rel="noopener noreferrer">Книга</a></td>
+			<td><a
+					href="https://vshkole.com/9-klass/reshebniki/informatika/jya-rivkind-ti-lisenko-la-chernikova-vv-shakotko-2017"
+					target="_blank" rel="noopener noreferrer">ГДЗ</a></td>
+			<td>14:00-14:45</td>
+			<td><a href="https://classroom.google.com/u/1/c/MTQ3NDQ4NDQxNzM0" target="_blank" rel="noopener noreferrer">Інформатика</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th></th>
+			<td><a href="https://informatik.pp.ua/pidruchniki/9-klas/pidruchnyk-informatyka-9-klas-kazantseva-2022"
+					target="_blank" rel="noopener noreferrer">Книга-2</a></td>
+			<td>нема :(</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+	<br><br>
+	<table border="1px">
+		<tr id="vt">
+			<th>Вівторок</th>
+			<th>Підручник</th>
+			<th>ГДЗ</th>
+			<th>Час</th>
+			<th>Класрум</th>
+			<th>ДЗ</th>
+		</tr>
+		<tr>
+			<th>1. Фізика</th>
+			<td><a href="https://vshkole.com/9-klass/uchebniki/fizika/vg-baryahtar-fya-bozhinova-so-dovgij-2017/stranitsa-2"
+					target="_blank" rel="noopener noreferrer">Книга</a></td>
+			<td><a href="https://vshkole.com/9-klass/reshebniki/fizika/vg-baryahtar-fya-bozhinova-so-dovgij-2017"
+					target="_blank" rel="noopener noreferrer">ГДЗ</a></td>
+			<td>8:15-8:50</td>
+			<td><a href="https://classroom.google.com/u/1/c/MjI2ODA1NzAxNDUy" target="_blank" rel="noopener noreferrer">Фізика</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>Година спілкування</th>
+			<td>навіщо</td>
+			<td>навіщо</td>
+			<td>8:50-9:00</td>
+			<td><a href="https://classroom.google.com/u/1/c/NDIyODY4OTUyMTg2" target="_blank" rel="noopener noreferrer">Година спілкування</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>2. Алгебра</th>
+			<td><a href="https://pidruchnyk.com.ua/983-algebra-9-klas-ister.html" target="_blank"
+					rel="noopener noreferrer">Книга</a></td>
+			<td><a href="https://vshkole.com/9-klass/reshebniki/algebra/os-ister-2017" target="_blank"
+					rel="noopener noreferrer">ГДЗ</a></td>
+			<td>9:10-9:55</td>
+			<td><a href="https://classroom.google.com/u/1/c/MTQ4MzUzNjc3NDA4" target="_blank" rel="noopener noreferrer">Алгебра</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>3. Зарубіжна література</th>
+			<td><a href="https://pidruchnyk.com.ua/1004-zarubizhna-voloschuk-9-klas.html" target="_blank"
+					rel="noopener noreferrer">Книга</a></td>
+			<td>нема :(</td>
+			<td>10:05-10:50</td>
+			<td><a href="https://classroom.google.com/u/1/c/MTQ3Njk3NTE3MDgz" target="_blank" rel="noopener noreferrer">Зарубіжна література</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>4. Фізична культура</th>
+			<td>ні</td>
+			<td>ні</td>
+			<td>11:10-11:55</td>
+			<td><a href="https://classroom.google.com/u/1/c/MTQ5MjQzNjc3MDIx" target="_blank" rel="noopener noreferrer">Фізична культура</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>5. Історія України</th>
+			<td><a href="https://pidruchnyk.com.ua/945-istoriya-ukrainy-9-klas-vlasov.html" target="_blank"
+					rel="noopener noreferrer">Книга</a></td>
+			<td>нема :(</td>
+			<td>12:10-12:55</td>
+			<td><a href="https://classroom.google.com/u/1/c/MTQ3NDU2OTgyNjI1" target="_blank" rel="noopener noreferrer">Історія України</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>6. Хімія</th>
+			<td><a href="https://pidruchnyk.com.ua/1039-himiya-berezan-9-klas.html" target="_blank"
+					rel="noopener noreferrer">Книга</a></td>
+			<td><a href="https://4book.org/gdz-reshebniki-ukraina/9-klas/himiya-9-klas-berezan-gdz-2017" target="_blank"
+					rel="noopener noreferrer">ГДЗ</a></td>
+			<td>13:05-13:50</td>
+			<td><a href="https://classroom.google.com/u/1/c/MTQyOTY3MDgzMTA4" target="_blank" rel="noopener noreferrer">Хімія</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>7. Основи здоров'я</th>
+			<td><a href="https://pidruchnyk.com.ua/1024-zdorovya-boychenko-9-klas-2017.html" target="_blank"
+					rel="noopener noreferrer">Книга</a></td>
+			<td>нема :(</td>
+			<td>14:00-14:45</td>
+			<td><a href="https://classroom.google.com/u/1/c/MTQ4MzUyNDMyMjE1" target="_blank" rel="noopener noreferrer">Основи здоров'я</a></td>
+			<td></td>
+		</tr>
+	</table>
+	<br><br>
+	<table border="1px">
+		<tr id="sr">
+			<th>Середа</th>
+			<th>Підручник</th>
+			<th>ГДЗ</th>
+			<th>Час</th>
+			<th>Класрум</th>
+			<th>ДЗ</th>
+		</tr>
+		<tr>
+			<th>1. Інформатика</th>
+			<td><a href="https://pidruchnyk.com.ua/1046-informatika-9-klas-ryvkind-2017.html" target="_blank"
+					rel="noopener noreferrer">Книга</a></td>
+			<td><a
+					href="https://vshkole.com/9-klass/reshebniki/informatika/jya-rivkind-ti-lisenko-la-chernikova-vv-shakotko-2017"
+					target="_blank" rel="noopener noreferrer">ГДЗ</a></td>
+			<td>8:15-8:50</td>
+			<td><a href="https://classroom.google.com/u/1/c/MTQ3NDQ4NDQxNzM0" target="_blank" rel="noopener noreferrer">Інформатика</a></td>
+			<td></td>
+		<tr>
+			<th></th>
+			<td><a href="https://informatik.pp.ua/pidruchniki/9-klas/pidruchnyk-informatyka-9-klas-kazantseva-2022"
+					target="_blank" rel="noopener noreferrer">Книга-2</a></td>
+			<td>нема :(</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		</tr>
+		<tr>
+			<th>Година спілкування</th>
+			<td>навіщо</td>
+			<td>навіщо</td>
+			<td>8:50-9:00</td>
+			<td><a href="https://classroom.google.com/u/1/c/NDIyODY4OTUyMTg2" target="_blank" rel="noopener noreferrer">Година спілкування</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>2. Геометрія</th>
+			<td><a target="_blank" href="https://pidruchnyk.com.ua/1031-ister-geometriya-9-klas.html">Книга</a></td>
+			<td><a target="_blank" href="https://vshkole.com/9-klass/reshebniki/geometriya/os-ister-2017">ГДЗ</a></td>
+			<td>9:10-9:55</td>
+			<td><a href="https://classroom.google.com/u/1/c/MTQ4MzUzNjc3NDE1" target="_blank" rel="noopener noreferrer">Геометрія</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>3. Англійська мова</th>
+			<td><a target="_blank" href="https://pidruchnyk.com.ua/979-9klas-nesvit-2017.html">Книга</a></td>
+			<td><a target="_blank"
+					href="https://4book.org/gdz-reshebniki-ukraina/9-klas/gdz-vidpovidi-angliyska-mova-9-klas-nesvit-2017">ГДЗ</a>
+			</td>
+			<td>10:10-10:55</td>
+			<td><a href="https://classroom.google.com/u/1/c/MTQ3Njk0NzQ5MjA3" target="_blank" rel="noopener noreferrer">Англійська мова</a></td>
+			<td></td>
+		</tr>
+		<th>4. Історія України</th>
+		<td><a href="https://pidruchnyk.com.ua/945-istoriya-ukrainy-9-klas-vlasov.html" target="_blank"
+				rel="noopener noreferrer">Книга</a></td>
+		<td>нема :(</td>
+		<td>11:10-11:55</td>
+		<td><a href="https://classroom.google.com/u/1/c/MTQ3NDU2OTgyNjI1" target="_blank" rel="noopener noreferrer">Історія України</a></td>
+		<td></td>
+		<tr>
+			<th> Географія</th>
+			<td><a href="https://pidruchnyk.com.ua/993-geografiya-9-klas-boyko.html" target="_blank">Книга</a></td>
+			<td><a href="https://shkola.obozrevatel.com/gdz/9klass/geografija/bojko-20172/" target="_blank">ГДЗ</a></td>
+			<td>11:10-11:55</td>
+			<td><a href="https://classroom.google.com/u/1/c/MTQ3Njk5MjE2MDU2" target="_blank" rel="noopener noreferrer">Географія</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>5. Українська мова</th>
+			<td><a href="https://vshkole.com/9-klass/uchebniki/ukrayinska-mova/op-glazova-2017/stranitsa-2" target="_blank"
+					rel="noopener noreferrer">Книга</a></td>
+			<td><a href="https://vshkole.com/9-klass/reshebniki/ukrayinska-mova/op-glazova-2017" target="_blank"
+					rel="noopener noreferrer">ГДЗ</a></td>
+			<td>12:10-12:55</td>
+			<td><a href="https://classroom.google.com/u/1/c/MTQ3Njk1Mzg1NTU5" target="_blank" rel="noopener noreferrer">Українська мова</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>6. Мистецтво</th>
+			<td>хз</td>
+			<td>хз</td>
+			<td>13:05-13:50</td>
+			<td><a href="https://classroom.google.com/u/1/c/MTQ5MjMzMDA3NzQx" target="_blank" rel="noopener noreferrer">Мистецтво</a></td>
+			<td></td>
+		</tr>
+	</table>
+	<br><br>
+	<table border="1px">
+		<tr id="cht">
+			<th>Четвер</th>
+			<th>Підручник</th>
+			<th>ГДЗ</th>
+			<th>Час</th>
+			<th>Класрум</th>
+			<th>ДЗ</th>
+		</tr>
+		<tr>
+			<th>1. Хімія</th>
+			<td><a href="https://pidruchnyk.com.ua/1039-himiya-berezan-9-klas.html" target="_blank"
+					rel="noopener noreferrer">Книга</a></td>
+			<td><a href="https://4book.org/gdz-reshebniki-ukraina/9-klas/himiya-9-klas-berezan-gdz-2017" target="_blank"
+					rel="noopener noreferrer">ГДЗ</a></td>
+			<td>8:15-8:50</td>
+			<td><a href="https://classroom.google.com/u/1/c/MTQyOTY3MDgzMTA4" target="_blank" rel="noopener noreferrer">Хімія</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>Година спілкування</th>
+			<td>навіщо</td>
+			<td>навіщо</td>
+			<td>8:50-9:00</td>
+			<td><a href="https://classroom.google.com/u/1/c/NDIyODY4OTUyMTg2" target="_blank" rel="noopener noreferrer">Година спілкування</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>2. Основи правознавства</th>
+			<td><a href="https://pidruchnyk.com.ua/1050-pravo-9-klas-andrusyshyn.html" target="_blank"
+					rel="noopener noreferrer">Книга</a></td>
+			<td><a
+					href="https://rule.school/9-klas/science-of-law-9/385-gdz-osnovi-pravoznavstva-9-klas-pdruchnik-andrusishin-b-berendyeyev-so-guban-rv-2017.html"
+					target="_blank" rel="noopener noreferrer">ГДЗ</a></td>
+			<td>9:10-9:55</td>
+			<td><a href="https://classroom.google.com/u/1/c/NDA3NTkyMjkwMjIw" target="_blank" rel="noopener noreferrer">Основи правознавства</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>3. Фізика</th>
+			<td><a href="https://vshkole.com/9-klass/uchebniki/fizika/vg-baryahtar-fya-bozhinova-so-dovgij-2017/stranitsa-2"
+					target="_blank" rel="noopener noreferrer">Книга</a></td>
+			<td><a href="https://vshkole.com/9-klass/reshebniki/fizika/vg-baryahtar-fya-bozhinova-so-dovgij-2017"
+					target="_blank" rel="noopener noreferrer">ГДЗ</a></td>
+			<td>10:05-10:50</td>
+			<td><a href="https://classroom.google.com/u/1/c/MjI2ODA1NzAxNDUy" target="_blank" rel="noopener noreferrer">Фізика</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>4. Українська мова</th>
+			<td><a href="https://vshkole.com/9-klass/uchebniki/ukrayinska-mova/op-glazova-2017/stranitsa-2" target="_blank"
+					rel="noopener noreferrer">Книга</a></td>
+			<td><a href="https://vshkole.com/9-klass/reshebniki/ukrayinska-mova/op-glazova-2017" target="_blank"
+					rel="noopener noreferrer">ГДЗ</a></td>
+			<td>11:10-11:55</td>
+			<td><a href="https://classroom.google.com/u/1/c/MTQ3Njk1Mzg1NTU5" target="_blank" rel="noopener noreferrer">Українська мова</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>5. Зарубіжна література</th>
+			<td><a href="https://pidruchnyk.com.ua/1004-zarubizhna-voloschuk-9-klas.html" target="_blank"
+					rel="noopener noreferrer">Книга</a></td>
+			<td>нема :(</td>
+			<td>12:10-12:55</td>
+			<td><a href="https://classroom.google.com/u/1/c/MTQ3Njk3NTE3MDgz" target="_blank" rel="noopener noreferrer">Зарубіжна література</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>6. Біологія</th>
+			<td><a href="https://pidruchnyk.com.ua/912-biologiya-sobol-9-klas.html" target="_blank"
+					rel="noopener noreferrer">Книга</a></td>
+			<td><a href="https://4book.org/gdz-reshebniki-ukraina/9-klas/biologiya-9-klas-sobol-gdz-2017" target="_blank"
+					rel="noopener noreferrer">ГДЗ</a></td>
+			<td>13:05-13:50</td>
+			<td><a href="https://classroom.google.com/u/1/c/MTQyOTgwOTI2MTI4" target="_blank" rel="noopener noreferrer">Біологія</a></td>
+			<td></td>
+		</tr>
+	</table>
+	<br><br>
+	<table border="1px">
+		<tr>
+			<th id="pt">П'ятниця</th>
+			<th>Підручник</th>
+			<th>ГДЗ</th>
+			<th>Час</th>
+			<th>Класрум</th>
+			<th>ДЗ</th>
+		</tr>
+		<tr>
+			<th>1. Фізика</th>
+			<td><a href="https://vshkole.com/9-klass/uchebniki/fizika/vg-baryahtar-fya-bozhinova-so-dovgij-2017/stranitsa-2"
+					target="_blank" rel="noopener noreferrer">Книга</a></td>
+			<td><a href="https://vshkole.com/9-klass/reshebniki/fizika/vg-baryahtar-fya-bozhinova-so-dovgij-2017"
+					target="_blank" rel="noopener noreferrer">ГДЗ</a></td>
+			<td>8:15-8:50</td>
+			<td><a href="https://classroom.google.com/u/1/c/MjI2ODA1NzAxNDUy" target="_blank" rel="noopener noreferrer">Фізика</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>Година спілкування</th>
+			<td>навіщо</td>
+			<td>навіщо</td>
+			<td>8:50-9:00</td>
+			<td><a href="https://classroom.google.com/u/1/c/NDIyODY4OTUyMTg2" target="_blank" rel="noopener noreferrer">Година спілкування</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>2. Алгебра</th>
+			<td><a href="https://pidruchnyk.com.ua/983-algebra-9-klas-ister.html" target="_blank"
+					rel="noopener noreferrer">Книга</a></td>
+			<td><a href="https://vshkole.com/9-klass/reshebniki/algebra/os-ister-2017" target="_blank"
+					rel="noopener noreferrer">ГДЗ</a></td>
+			<td>9:10-9:55</td>
+			<td><a href="https://classroom.google.com/u/1/c/MTQ4MzUzNjc3NDA4" target="_blank" rel="noopener noreferrer">Алгебра</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>3. Англійська мова</th>
+			<td><a target="_blank" href="https://pidruchnyk.com.ua/979-9klas-nesvit-2017.html">Книга</a></td>
+			<td><a target="_blank"
+					href="https://4book.org/gdz-reshebniki-ukraina/9-klas/gdz-vidpovidi-angliyska-mova-9-klas-nesvit-2017">ГДЗ</a>
+			</td>
+			<td>10:10-10:55</td>
+			<td><a href="https://classroom.google.com/u/1/c/MTQ3Njk0NzQ5MjA3" target="_blank" rel="noopener noreferrer">Англійська мова</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>4. Всесвітня Історія</th>
+			<td><a href="https://pidruchnyk.com.ua/987-vsesvitnya-9-klas-polyanskiy.html" target="_blank"
+					rel="noopener noreferrer">Книга</a></td>
+			<td>нема :(</td>
+			<td>11:10-11:55</td>
+			<td><a href="https://classroom.google.com/u/1/c/MTQ3NDU2OTgxNTY3" target="_blank" rel="noopener noreferrer">Всесвітня Історія</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>5. Фізична культура</th>
+			<td>ні</td>
+			<td>ні</td>
+			<td>12:10-12:55</td>
+			<td><a href="https://classroom.google.com/u/1/c/MTQ5MjQzNjc3MDIx" target="_blank" rel="noopener noreferrer">Фізична культура</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>6. Українська література</th>
+			<td><a href="https://pidruchnyk.com.ua/967-ukrliteratura-9-klas-avramenko-2017.html" target="_blank"
+					rel="noopener noreferrer">Книга</a></td>
+			<td><a href="https://4book.org/gdz-reshebniki-ukraina/9-klas/gdz-ukrayinska-literatura-9-klas-avramenko-2017"
+					target="_blank" rel="noopener noreferrer">ГДЗ</a></td>
+			<td>13:05-13:50</td>
+			<td><a href="https://classroom.google.com/u/1/c/MTQ3Njg4MjkwMjc0" target="_blank" rel="noopener noreferrer">Українська література</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>7. Трудове навчання</th>
+			<td>нема</td>
+			<td>нема</td>
+			<td>14:00-14:45</td>
+			<td><a href="https://classroom.google.com/u/1/c/MTQ4MzQ4NTY0NDcx" target="_blank" rel="noopener noreferrer">Трудове навчання</a></td>
+			<td></td>
+		</tr>
+	</table>
+</div>
+</body>
+
+</html>
