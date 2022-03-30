@@ -3,5 +3,14 @@ h1 {
 }
 table {
 	border: 1px;
+}
+img {
+width: 50px;
+position: absolute;
+margin-left: 20px;
+padding-top: 10px;
+}
+.help {
+display: inline-block;
 
 }
